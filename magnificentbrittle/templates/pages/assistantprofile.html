@@ -1,0 +1,17 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<h1>Assistant Profile</h1>
+<p>Name: {{ assistant.name }}</p>
+<p>Email: {{ assistant.email }}</p>
+<p>Phone: {{ assistant.phone }}</p>
+<p>Address: {{ assistant.address }}</p>
+<p>Education: {{ assistant.education }}</p>
+<p>Language Spoken: {{ assistant.languages_spoken }}</p>
+<p>Experience: {{ assistant.experience }}</p>
+<p>Position: {{ assistant.position }}</p>
+<p>Department: {{ assistant.department }}</p>
+<p>Date of Joining: {{ assistant.date_of_joining }}</p>
+{% endblock %}

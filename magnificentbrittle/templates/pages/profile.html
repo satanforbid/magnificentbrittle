@@ -1,0 +1,30 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<h1>Patient Profile</h1>
+<p>Name: {{patients.name}}</p>
+<p>Email: {{patients.email}}</p>
+<p>Phone: {{patients.phone}}</p>
+<p>Address: {{patients.address}}</p>
+<p>Professional: {{patients.professional}}</p>
+<p>Appointment: {{patients.appointment}}</p>
+<p>Date of Birth: {{patients.date_of_birth}}</p>
+<p>Gender: {{patients.gender}}</p>
+<p>Medical History: {{patients.medical_history}}</p>
+<p>Insurance Provider: {{patients.insurance_provider}}</p>
+<p>Insurance Policy Number: {{patients.insurance_policy_number}}</p>
+<p>Emergency Name: {{patients.emergency_contact_name}}</p>
+<p>Emergency Contact: {{patients.emergency_contact_phone}}</p>
+<table>
+    <tr>
+        <th>Update: </th>
+        <td><a href="{% url 'updatePatient' patients.id %}">Update</a></td>
+        <th>Delete: </th>
+        <td><a href="{% url 'deletePatient' patients.id %}">Delete</a></td>
+        <th>Records: </th>
+        <td><a href="{% url 'recordsPage' patient_id=patients.id %}">View Records</a></td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper loginwrapper">
+    <div class="container main loginmain">
+        <div class="row loginrow">
+            <div class="col-md-6 side-image" style="background-image: url('{% static 'media/nature3.jpg' %}')">
+                <!-- image -->
+                <img class="loginimage" src="{% static '/media/logo.jpg' %}" alt="">
+                <div class="text">
+                    <p>Join the field of psychology <i>- Magnificent Brittle</i></p>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+                <div class="input-box">
+                    <header>Create Account</header>
+                    <form action="{% url 'loginPage' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="input-field">
+                            <input type="text" class="input" id="email" name="email" required autocomplete="off">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input" id="password" name="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <input type="hidden" name="user_type" value="P">
+                        <div class="input-field">
+                            <input type="submit" class="submit" value="Log In">
+                        </div>
+                    </form>
+                    <div class="signin">
+                        <span>No existing account? <a href=../signup>Sign Up Here</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

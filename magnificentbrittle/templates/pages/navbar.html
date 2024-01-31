@@ -1,0 +1,40 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/navbar.css' %}">
+<nav class="navbar navbar-expand-lg bg">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-2 ms-3 text-white" href="#">
+      <image alt="logo" width="50" height="50" class="d-inline-block align-text-top" src="{% static '/media/logo.jpg' %}">
+        Magnificent Brittle
+      </image>
+    </a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse text-white" id="navbarNav">
+      <ul class="navbar-nav nav nav-tabs ms-auto">
+        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+          <a class="nav-link mx-3" href="/">Home</a>
+        </li>
+        <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+          <a class="nav-link mx-3" href="{% url 'aboutPage' %}">About Us</a>
+        </li>
+        <li class="nav-item {% if request.path == '/services/' %}active{% endif %}">
+          <a class="nav-link mx-3" href="{% url 'servicesPage' %}">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Start
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'createPatientPage' %}" style="color: black;">Patient</a></li>
+            <li><a class="dropdown-item" href="{% url 'createProfessionalPage' %}" style="color: black;">Professional</a></li>
+            <li><a class="dropdown-item" href="{% url 'createAssistantPage' %}" style="color: black;">Assistant</a></li>
+          </ul>
+        </li>
+        <li class="nav-item {% if request.path == '/emergency/' %}active{% endif %}">
+          <a class="nav-link mx-3" href="{% url 'emergencyPage' %}">Emergency</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

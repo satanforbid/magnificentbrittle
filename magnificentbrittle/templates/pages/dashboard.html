@@ -1,0 +1,11 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+{% for patient in patients %}
+
+<h1>Welcome {{patient.name}}</h1>
+
+{% endfor %}
+{% endblock %}

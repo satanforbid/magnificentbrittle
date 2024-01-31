@@ -1,0 +1,25 @@
+.bg {
+    background-color: #386641;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggling:focus {
+    box-shadow: none;
+}
+
+nav .nav-item a {
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+nav .nav-item a:hover {
+    color: #ffffff;
+}
+
+
+
+

@@ -1,0 +1,95 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Record Form</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="id_patient" class="form-label">Patient Name: </label>
+                {{ form.patient }}
+                {% if form.patient.errors %}
+                    <small class="text-danger">{{ form.patient.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_diagnosis" class="form-label">Diagnosis: </label>
+                {{ form.diagnosis }}
+                {% if form.diagnosis.errors %}
+                    <small class="text-danger">{{ form.diagnosis.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_treatment_plan" class="form-label">Treatment Plan: </label>
+                {{ form.treatment_plan }}
+                {% if form.treatment_plan.errors %}
+                    <small class="text-danger">{{ form.treatment_plan.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_therapist_info" class="form-label">Therapist Info: </label>
+                {{ form.therapist_info }}
+                {% if form.therapist_info.errors %}
+                    <small class="text-danger">{{ form.therapist_info.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_medication_history" class="form-label">Medication History: </label>
+                {{ form.medication_history }}
+                {% if form.medication_history.errors %}
+                    <small class="text-danger">{{ form.medication_history.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_symptoms_and_triggers" class="form-label">Symptoms and Triggers: </label>
+                {{ form.symptoms_and_triggers }}
+                {% if form.symptoms_and_triggers.errors %}
+                    <small class="text-danger">{{ form.symptoms_and_triggers.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_support_system" class="form-label">Support System: </label>
+                {{ form.support_system }}
+                {% if form.support_system.errors %}
+                    <small class="text-danger">{{ form.support_system.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_goals_and_aspirations" class="form-label">Gender: </label>
+                {{ form.goals_and_aspirations }}
+                {% if form.goals_and_aspirations.errors %}
+                    <small class="text-danger">{{ form.goals_and_aspirations.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_coping_mechanisms" class="form-label">Medical History: </label>
+                {{ form.coping_mechanisms }}
+                {% if form.coping_mechanisms.errors %}
+                    <small class="text-danger">{{ form.coping_mechanisms.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_quality_of_life_indicators" class="form-label">Quality of Life Indicators: </label>
+                {{ form.quality_of_life_indicators }}
+                {% if form.quality_of_life_indicators.errors %}
+                    <small class="text-danger">{{ form.quality_of_life_indicators.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_feedback_and_preferences" class="form-label">Feedback and Preferences: </label>
+                {{ form.feedback_and_preferences }}
+                {% if form.feedback_and_preferences.errors %}
+                    <small class="text-danger">{{ form.feedback_and_preferences.errors }}</small>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{% endblock %}

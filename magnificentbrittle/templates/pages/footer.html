@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/footer.css' %}">
+<footer class="footer">
+    <div class="container footercon">
+        <div class="row footerrow">
+              <div class="footer-col">
+                <h4>Magnificent Brittle</h4>
+                <p>Magnificent Brittle is a Help-Seeking Website to help people navigate their needs through mental.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="{% url 'aboutPage' %}">About Us</a></li>
+                    <li><a href="{% url 'servicesPage' %}">Services</a></li>
+                    <li><a href="{% url 'emergencyPage' %}">Emergency</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacts</h4>
+                <div class="contact-links">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> (63+) 9392929105</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i> @magnificentbrittle</a></li>
+                </ul>
+                </div>
+            </div>
+             <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                     <a href="#"><i class="fa-brands fa-github"></i></a>
+                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                     <a href="#"><i class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="logo=name">
+                <p>&copy;2023 All rights reserved by: Magnificent Brittle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

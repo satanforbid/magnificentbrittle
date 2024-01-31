@@ -1,0 +1,18 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<h1>Records</h1>
+<p>Patient: {{records.patient}}</p>
+<p>Diagnosis: {{records.diagnosis}}</p>
+<p>Treatment Plan: {{records.treatment_plan}}</p>
+<p>Therapist Info: {{records.therapist_info}}</p>
+<p>Medical History: {{records.medication_history}}</p>
+<p>Symptoms and Triggers: {{records.symptoms_and_triggers}}</p>
+<p>Support System: {{records.support_system}}</p>
+<p>Goals and Aspirations: {{records.goals_and_aspirations}}</p>
+<p>Coping Mechanism: {{records.coping_mechanisms}}</p>
+<p>Quality of Life Indicators: {{records.quality_of_life_indicators}}</p>
+<p>Feedback and Preferences: {{records.feedback_and_preferences}}</p>
+{% endblock %}

@@ -1,0 +1,10 @@
+.serviceswrapper {
+    background: #fffdd0;
+    padding: 0 20px 0 20px;
+}
+.servicesmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

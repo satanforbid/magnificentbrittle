@@ -1,0 +1,108 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Patient Information Form</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_name" class="form-label">Full Name: </label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <small class="text-danger">{{ form.name.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Email: </label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <small class="text-danger">{{ form.email.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_phone" class="form-label">Phone Number: </label>
+                {{ form.phone }}
+                {% if form.phone.errors %}
+                    <small class="text-danger">{{ form.phone.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_address" class="form-label">Address: </label>
+                {{ form.address }}
+                {% if form.address.errors %}
+                    <small class="text-danger">{{ form.address.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_professional" class="form-label">Professional: </label>
+                {{ form.professional }}
+                {% if form.professional.errors %}
+                    <small class="text-danger">{{ form.professional.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_appointment" class="form-label">Appointment Date and Time: </label>
+                {{ form.appointment }}
+                {% if form.appointment.errors %}
+                    <small class="text-danger">{{ form.appointment.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_date_of_birth" class="form-label">Date of Birth: </label>
+                {{ form.date_of_birth }}
+                {% if form.date_of_birth.errors %}
+                    <small class="text-danger">{{ form.date_of_birth.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_gender" class="form-label">Gender: </label>
+                {{ form.gender }}
+                {% if form.gender.errors %}
+                    <small class="text-danger">{{ form.gender.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_medical_history" class="form-label">Medical History: </label>
+                {{ form.medical_history }}
+                {% if form.medical_history.errors %}
+                    <small class="text-danger">{{ form.medical_history.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_insurance_provider" class="form-label">Insurance Provider: </label>
+                {{ form.insurance_provider }}
+                {% if form.insurance_provider.errors %}
+                    <small class="text-danger">{{ form.insurance_provider.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_insurance_policy_number" class="form-label">Insurance Policy Number: </label>
+                {{ form.insurance_policy_number }}
+                {% if form.insurance_policy_number.errors %}
+                    <small class="text-danger">{{ form.insurance_policy_number.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_emergency_contact_name" class="form-label">Emergency Contact Name: </label>
+                {{ form.emergency_contact_name }}
+                {% if form.emergence_contact_name.errors %}
+                    <small class="text-danger">{{ form.emergency_contact_name.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_emergency_contact_phone" class="form-label">Emergency Contact Number: </label>
+                {{ form.emergency_contact_phone }}
+                {% if form.emergency_contact_phone.errors %}
+                    <small class="text-danger">{{ form.emergency_contact_phone.errors }}</small>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+    <h1>Professional Profile</h1>
+    <p>Name: {{ professional.name }}</p>
+    <p>Email: {{ professional.email }}</p>
+    <p>Phone: {{ professional.phone }}</p>
+    <p>Address: {{ professional.address }}</p>
+    <p>Education: {{ professional.education }}</p>
+    <p>Language Spoken: {{ professional.languages_spoken }}</p>
+    <p>Experience: {{ professional.experience }}</p>
+    <p>Profession: {{ professional.profession }}</p>
+    <p>Specialty: {{ professional.specialty }}</p>
+    <p>License Number: {{ professional.license_number }}</p>
+    <p>Psychotherapy Approach: {{ professional.psychotherapy_approach }}</p>
+    <p>Therapeutic Modalities: {{ professional.therapeutic_modalities }}</p>
+    <p>Populations Served: {{ professional.populations_served }}</p>
+    <table>
+    <tr>
+        <th>Records: </th>
+        <td>
+            {% if patient %}
+                <a href="{% url 'createRecords' patient.id %}">Create New Record</a>
+            {% else %}
+                <span>Create New Record</span>
+            {% endif %}
+        </td>
+    </tr>
+</table>
+{% endblock %}

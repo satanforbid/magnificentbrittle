@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.aboutsection{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fffdd0;
+}
+.aboutcon{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.aboutconsec{
+    float: left;
+    width: 55%;
+}
+.aboutimg{
+    float: right;
+    width: 40%;
+}
+.aboutimg img{
+    width: 100%;
+    height: auto;
+}
+.aboutconsec .abouttitle{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.aboutconsec .aboutcontent h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
+.aboutconsec .aboutcontent p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.aboutconsec .aboutcontent .aboutbutton{
+    margin-top: 30px;
+}
+.aboutconsec .aboutcontent .aboutbutton a{
+    background-color: #ffffff;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #386641;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+.aboutconsec .aboutcontent .aboutbutton a:hover{
+    background-color: #386641;
+    color: #ffffff;
+}
+@media screen and (max-width: 768px){
+    .aboutcon{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+    }
+    .aboutconsec{
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+    }
+    .aboutimg{
+        float: none;
+        width: 100%
+    }
+    .aboutimg img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .aboutconsec .abouttitle{
+        text-align: center;
+        font-size: 19px;
+    }
+    .aboutconsec .aboutcontent .aboutbutton{
+    text-align: center;
+    }
+    .aboutconsec .aboutcontent .aboutbutton a{
+        padding: 9px 30px;
+    }
+}

@@ -1,0 +1,94 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Assistant Information Form</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_user" class="form-label">User: </label>
+                {{ form.user }}
+                {% if form.user.errors %}
+                    <small class="text-danger">{{ form.user.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_name" class="form-label">Full Name: </label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <small class="text-danger">{{ form.name.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Email: </label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <small class="text-danger">{{ form.email.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_phone" class="form-label">Phone Number: </label>
+                {{ form.phone }}
+                {% if form.phone.errors %}
+                    <small class="text-danger">{{ form.phone.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_address" class="form-label">Address: </label>
+                {{ form.address }}
+                {% if form.address.errors %}
+                    <small class="text-danger">{{ form.address.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_education" class="form-label">Education: </label>
+                {{ form.education }}
+                {% if form.education.errors %}
+                    <small class="text-danger">{{ form.education.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_languages_spoken" class="form-label">Language Spoken: </label>
+                {{ form.languages_spoken }}
+                {% if form.languages_spoken.errors %}
+                    <small class="text-danger">{{ form.languages_spoken.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_experience" class="form-label">Experience: </label>
+                {{ form.experience }}
+                {% if form.experience.errors %}
+                    <small class="text-danger">{{ form.experience.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_position" class="form-label">Position: </label>
+                {{ form.position }}
+                {% if form.position.errors %}
+                    <small class="text-danger">{{ form.position.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_department" class="form-label">Department: </label>
+                {{ form.department }}
+                {% if form.department.errors %}
+                    <small class="text-danger">{{ form.department.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_date_of_joining" class="form-label">Date of Joining: </label>
+                {{ form.date_of_joining }}
+                {% if form.date_of_joining.errors %}
+                    <small class="text-danger">{{ form.date_of_joining.errors }}</small>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{% endblock %}

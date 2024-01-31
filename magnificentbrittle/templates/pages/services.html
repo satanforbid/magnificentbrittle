@@ -1,0 +1,51 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/services.css' %}">
+{% endblock %}
+{% block content %}
+<div class="wrapper serviceswrapper">
+    <div class="container main servicesmain">
+        <div class="container py-4">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'media/nature4.jpg' %}" class="card-img-top" alt="First Card">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text for the first card.</p>
+                        </div>
+                    </div>
+                </div>
+
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'media/nature4.jpg' %}" class="card-img-top" alt="Second Card">
+        <div class="card-body">
+          <p class="card-text">Some quick example text for the second card.</p>
+        </div>
+      </div>
+    </div>
+
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'media/nature4.jpg' %}" class="card-img-top" alt="Third Card">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text for the third card.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'media/nature4.jpg' %}" class="card-img-top" alt="Fourth Card">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text for the fourth card.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

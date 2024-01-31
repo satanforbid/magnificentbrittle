@@ -1,0 +1,108 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Professional Information Form</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_name" class="form-label">Full Name: </label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <small class="text-danger">{{ form.name.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Email: </label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <small class="text-danger">{{ form.email.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_phone" class="form-label">Phone Number: </label>
+                {{ form.phone }}
+                {% if form.phone.errors %}
+                    <small class="text-danger">{{ form.phone.errors }}</small>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_address" class="form-label">Address: </label>
+                {{ form.address }}
+                {% if form.address.errors %}
+                    <small class="text-danger">{{ form.address.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_education" class="form-label">Education: </label>
+                {{ form.education }}
+                {% if form.education.errors %}
+                    <small class="text-danger">{{ form.education.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_languages_spoken" class="form-label">Language Spoken: </label>
+                {{ form.languages_spoken }}
+                {% if form.languages_spoken.errors %}
+                    <small class="text-danger">{{ form.languages_spoken.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_experience" class="form-label">Experience: </label>
+                {{ form.experience }}
+                {% if form.experience.errors %}
+                    <small class="text-danger">{{ form.experience.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_profession" class="form-label">Profession: </label>
+                {{ form.profession }}
+                {% if form.profession.errors %}
+                    <small class="text-danger">{{ form.profession.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_specialty" class="form-label">Specialty: : </label>
+                {{ form.specialty }}
+                {% if form.specialty.errors %}
+                    <small class="text-danger">{{ form.specialty.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_license_number" class="form-label">License Number: </label>
+                {{ form.license_number }}
+                {% if form.license_number.errors %}
+                    <small class="text-danger">{{ form.license_number.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_psychotherapy_approach" class="form-label">Psychotherapy Approach: </label>
+                {{ form.psychotherapy_approach }}
+                {% if form.psychotherapy_approach.errors %}
+                    <small class="text-danger">{{ form.psychotherapy_approach.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_therapeutic_modalities" class="form-label">Therapeutic Modalities: </label>
+                {{ form.therapeutic_modalities }}
+                {% if form.therapeutic_modalities.errors %}
+                    <small class="text-danger">{{ form.therapeutic_modalities.errors }}</small>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="id_populations_served" class="form-label">Population Served: </label>
+                {{ form.populations_served }}
+                {% if form.populations_served.errors %}
+                    <small class="text-danger">{{ form.populations_served.errors }}</small>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/about.css' %}">
+{% endblock %}
+{% block content %}
+<div class="section aboutsection">
+    <div class="container aboutcon">
+        <div class="content-section aboutconsec">
+            <div class="title abouttitle">
+                <h1>About Us <span class="badge bg-secondary">New</span></h1>
+            </div>
+            <div class="content aboutcontent">
+                <h3>Lorem Ipsum dolor sit amet, consectetur adipisicing</h3>
+                <p>Lorem Ipsum dolor sit amet, consectetur adipisicing
+                Lorem Ipsum dolor sit amet, consectetur adipisicing
+                Lorem Ipsum dolor sit amet, consectetur adipisicing
+                Lorem Ipsum dolor sit amet, consectetur adipisicing</p>
+                <div class="button aboutbutton">
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-section aboutimg">
+            <img src="{% static 'media/doctor.jpg' %}">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
